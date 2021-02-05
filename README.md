@@ -1,4 +1,4 @@
-## Databricks (ML and MLFLow)  
+## Databricks (ML/DeepML and MLFLow)  
 
 Databricks Unified Analytics Platform (elements):
 
@@ -78,7 +78,7 @@ Check MLFlow UI:
 <img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Databrics-MLFlow-demo-run.png" width="800">
 
 
-# Databricks with Snowflake integration
+# Snowflake (Databricks integration)
 
 Snowflake summary: unlimited concurrency for queries, a consolidated DW, and a big data solution on a single data platform, as well as dedicated virtual warehouses for analysts with heavy queries.
 
