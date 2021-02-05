@@ -67,7 +67,9 @@ for i in range(1,4):
 
 
 
-Example demo Notebook: https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/databrics/Databrics-MLFlow-demo.ipynb
+Notebook example: 
+
+https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/databrics/Databrics-MLFlow-demo.ipynb
 
 Check MLFlow UI:
 
@@ -456,7 +458,9 @@ Databricks:
 
 <img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-Databricks-simple-notebook.png" width="800">
 
-Notebook: https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/snowflake/snowflake_airbnb.ipynb
+Notebook example:
+
+https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/snowflake/snowflake_airbnb.ipynb
 
 Snowflake:
 
