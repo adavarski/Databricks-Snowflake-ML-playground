@@ -1,21 +1,21 @@
-# Databricks with Snowflake - MLFlow
+# Databricks with Snowflake - ML: MLFlow
 
 Snowflake summary: unlimited concurrency for queries, a consolidated DW, and a big data solution on a single data platform, as well as dedicated virtual warehouses for analysts with heavy queries.
 
 Snowflake Architecture:
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-architecture.png" width="600">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-architecture.png" width="600">
 
 Snowflake Layers:
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-layers.png" width="600">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-layers.png" width="600">
 
 Snowflake was built from the ground up and designed to handle modern big data and analytics challenges. It combines the benefits of both SMP and MPP architectures and takes full advantage of the cloud.
 
 Similar to an SMP architecture, Snowflake uses a central storage that is accessible from all the compute nodes. In addition, similar to an MPP
 architecture, Snowflake processes queries using MPP compute clusters, also known as virtual warehouses. As a result, Snowflake combines the simplicity of data management and scalability with a shared-nothing architecture (like in MPP).
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-MPP-vs-SMP.png" width="600">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-MPP-vs-SMP.png" width="600">
 
 
 Note: A specialty of the technical design of the Snowflake is that the data is stored in [micro-partitions](https://docs.snowflake.com/en/user-guide/tables-clustering-micropartitions.html),  which are immutable. This means that with any operations such as the addition or deletion of data, a new
@@ -25,9 +25,9 @@ Snowflake Architecture (deep):
 
 Shared-Disk vs Shared-Nothing architectures:
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/snareddisk.png" width="600">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/snareddisk.png" width="600">
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/sharednothing.png" width="600">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/sharednothing.png" width="600">
 
 
 
@@ -37,7 +37,7 @@ Snowflake is a modern Data Warehouse developed to address issue in existing Data
 
 Snowflake uses hybrid architecture. It is a mixture of both shared disk and shared nothing architecture. For storing data it uses shared disk design where it stores all data in a centralized place that is accessible from all nodes (servers) in the compute cluster. For running/executing query it uses shared nothing design, Snowflake executes query using compute clusters (virtual data warehouse) where each node in the cluster stores a portion of the entire data set locally. This approach offers the data management simplicity of a shared-disk architecture, but with the performance and scale-out benefits of a shared-nothing architecture.
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-architecture-full.png" width="800">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-architecture-full.png" width="800">
 
 As we from the above diagram Snowflake has 3 layers.
 
@@ -85,14 +85,14 @@ Conclusion
 
 Planning: Deciding on a Snowflake Edition
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-editions.png" width="800">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-editions.png" width="800">
 
 
 Creating a Snowflake Account: 
 
 Click Start for Free in the upper-right corner of the page (www.snowflake.com). This will give you a 30-day trial of Snowflake plus 400 Snowflake credits to play with. Enter the following required details: name, company name, e-mail, phone number, Snowflake edition, cloud provider, and region. Finish by clicking Create Account, and in about 15 minutes, you will receive an e-mail with a link to your web interface.
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-UI-startup.png" width="800">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-UI-startup.png" width="800">
 
 
 Installing Snowsql
@@ -284,11 +284,11 @@ Check Snowflake UI:
 
 DWH:
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-UI-DW-DEVELOPMENT.png" width="800">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-UI-DW-DEVELOPMENT.png" width="800">
 
 DB:AIRBNB:TABLE:ZIPCODES2000_SNOWSQL
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-Databrick-write-sampletable.png" width="800">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-Databrick-write-sampletable.png" width="800">
 
 
 Continuous Data Loading with Snowpipe
@@ -330,11 +330,11 @@ select count(*) from snowpipe.public.snowtable
 
 Data flow process between Snowflake data warehouse services and managed Apache Spark/Databricks.
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-Spark-bidirectional-data-transfer.png" width="800">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-Spark-bidirectional-data-transfer.png" width="800">
 
 Snowflake <-> Spark interaction:
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowfalke-spark-interaction-table.png" width="600">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowfalke-spark-interaction-table.png" width="600">
 
 
 Databricks (notebook):
@@ -386,6 +386,6 @@ Snowflake:
 
 Example modern Analytics Solution/Platform architecture with Snowflake DWH:
 
-<img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-modern-DW-architecture.png" width="800">
+<img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-modern-DW-architecture.png" width="800">
 
 Note: Snowflake helped us to leverage big data and streaming capabilities that were impossible with the legacy solution. For big data, we were processing web logs for example within Apache Spark deployed on top of the EMR cluster. Snowflake accesses Parquet files, and we don’t need to load them into Snowflake. For the streaming use case, we leveraged DynamoDB streams and Kinesis Firehose, and all data is sent into an S3 bucket where Snowflake can consume it.
