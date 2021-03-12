@@ -466,7 +466,7 @@ Snowflake:
 
 <img src="https://github.com/adavarski/SaaS-ML-k8s/blob/main/k8s/Demo6-Spark-ML/pictures/Snowflake-Databrick-write-sampletable.png" width="800">
 
-Modern Analytics Solution/Platform architecture example with Snowflake DWH:
+Modern Analytics Solution/Platform architecture with Snowflake DWH:
 
 
 <img src="https://github.com/adavarski/Databricks-Snowflake-ML-playground/blob/main/pictures/Snowflake-modern-DW-architecture.png" width="800">
