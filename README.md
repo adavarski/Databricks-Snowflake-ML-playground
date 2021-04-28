@@ -139,7 +139,7 @@ Each virtual warehouse is an independent compute cluster and MPP (Massively para
 
 Each virtual warehouse runs with its own compute and caching. In Snowflake, while queries are running, compute resources can scale without disruption or downtime, and without the need to redistribute/rebalance data (storage). Scaling of compute resources can occur automatically, with auto-sensing. This means the Snowflake software can automatically detect when scaling is needed and scale your environment without admin or user involvement.
 
-Virtual warehouse will be auto-suspended when there is no query to execute and will be auto-resumed when there is a query to run. This is managed by Snowflake. We pay when the Virtual warehouse is active, meaning when we execute query. Query processing (Virtual Warehouse) are charged in the form of Snowflake credits. (I will cover about Snowflake cost in different post).
+Virtual warehouse will be auto-suspended when there is no query to execute and will be auto-resumed when there is a query to run. This is managed by Snowflake. We pay when the Virtual warehouse is active, meaning when we execute query. Query processing (Virtual Warehouse) are charged in the form of Snowflake credits. 
 
 Cloud Service
 
